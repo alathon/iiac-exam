@@ -30,13 +30,74 @@ incoming bookings. This will reduce the workload put on the manager, thus
 empowering him to focus on other areas of the business.
 
 \subsection{Results from the in-line analysis}
-\todo[inline]{What areas of the business exists, and what problems do they 
-    entail}
+The in-line analysis is meant to help us understand the environment in which 
+the company is situated, the business strategy of the company, and what work
+domains are defined within the business. This will help the designers to
+better understand the reasoning behind current work practices and how to 
+solve the problems that arise. The most noteable parts of the results from 
+the in-line analysis is the business strategy and the overview of the work 
+domains of \gomonkey.
+
+\subsubsection{Business strategy}
+The business strategy of \gomonkey was not written down before we started the
+project, so we had to construct and interpret on our perception of the company.
+This changed during the course of the design project, and this is the final 
+result:
+
+\begin{enumerate}
+	\item Become a self-sustainable climbing company with customers on a daily basis.
+	\item Minimize time requirements pr. booking/customer.
+	\item Minimize staff requirements to keep costs low.
+	\item Increase sales (Such as selling food and drinks).
+	\item Provide better and more comprehensive service than competitors.
+\end{enumerate}
+
+\subsubsection{Work domains}
+The company, while selling climbing sessions as a service, clearly does other
+things that does not directly add value, but a necessary nonetheless.		%this is spelled correctly! nonetheless
+While interviewing and observing the company, we mapped out those areas of 
+work, and the result can be seen here:
+
+\begin{itemize}
+	\item Booking Flow
+	\begin{itemize}	
+		\item Registering received bookings
+		\item Checking payment status
+		\item Informing customers prior to arrival
+		\item Receiving customers
+	\end{itemize}
+
+	\item Employee Schedule
+	\begin{itemize}
+		\item Scheduling shifts
+		\item Swapping shifts
+		\item Time registration
+	\end{itemize}
+
+	\item Economy and bookkeeping
+	\begin{itemize}
+		\item Payment during booking
+		\item Invoice after visit
+	\end{itemize}
+
+	\item Inventory Management
+	\begin{itemize}	
+		\item Maintenance of inventory
+		\item Stock control of equipment
+	\end{itemize}
+
+	\item Marketing
+	\begin{itemize}
+		\item Advertising
+		\item Offers and discounts
+	\end{itemize}
+\end{itemize} 
+
 
 \subsection{Results from the in-depth analysis}
 \todo[inline]{Observations, standard systems, work practices}
 
-The in-depth analysis is meant to help us understand exatly how and why the 
+The in-depth analysis is meant to help us understand exactly how and why the 
 existing processes work as they do. This was done by observing the processes,
 analysing documents and correspondance, and mapping out exactly what work 
 practices resulted in problematic situations. In the following section we describe the 
@@ -77,13 +138,13 @@ need another payment processor.
 \item[onlinebooq.dk]
 The second promising booking system was onlinebooq.dk. They support selling 
 'services', but unfortunately they only support selling one of each servive.
-This can be seen in figure \autoref{fig:onlinebooq} as the checkbox, next to the 
+This can be seen in \autoref{fig:onlinebooq} as the checkbox, next to the 
 service in question. This makes it useless for \gomonkey, since the price is 
 calculated from the amount of people utilizing each service. It does support 
 paypal and quickpay, but this doesn't matter if we cannot calculate the price 
 correctly.
 
-\todo[inline]{Remove border around figure}
+\todo[inline]{Remove border around \autoref{fig:onlinebooq}}
 \begin{figure}[htbp]
     \centering
         \includegraphics[width=.8\textwidth]{figures/onlinebooq.png}
