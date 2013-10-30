@@ -109,36 +109,69 @@ projects as measured by The Standish Group\cite{standish2012} had increased to
 37\%, attributed primarily to the same four factors of success as they had
 proposed in 1995. There are different ways to approach solving the reasons for
 failure proposed by The Standish Group as well as how to reach the elements of
-success. One common approach is to focus on the \textit{implementation} stage of
-software projects and improve the development process itself, seen in the form
-of e.g.\ agile development. Another is to focus on the \textit{planning} stage
-of software projects, which is what \must{} and this report concern themselves with.
+success. One approach is to focus on the \textit{implementation} stage of
+software projects and improve the development process itself, e.g.\ the
+innovation of methods such as agile development. Another is to focus on the
+\textit{planning} stage of software projects, which is what \must{} and this
+report concern themselves with.
 
 Readers are encouraged to read \cite{bodker2004participatory} for a more
-wholesome description of how \must{} works.
+wholesome description of how the \must{} method works.
 
 \section{Overview of techniques employed} \label{sec:overview}
-\todo[inline]{Describe a little about design techniques in general, cite
-the coursebook and relevant articles. 3-6 sentences}
+The \must{} method describes 16 specific techniques that can be used, depending
+on the phase of the project. Each technique serves a specific purpose, in that it
+has pros and cons as far as information gathering, information organization or discovery
+is concerned. Some techniques apply to specific phases of the \must{} method, and others
+are relevant throughout the lifetime of the design project.
 
-The \must{} method describes 16 specific techniques which are organized into
-phases, principles, knowledge areas and the tools used to represent them. Many
-of the techniques 
 The techniques listed below were used in one or more of the design phases.
-\todo[inline]{Below: Describe every technique used and how it was used, cite 
-relevant articles for other uses or longer description}
 \begin{description}
-    \item [Baseline Planning]
-    \item [Interview]
-    \item [Observation]
-    \item [Diagnostic Mapping]
-    \item [Market study]
-    \item [Think-aloud experiment]
-    \item [Document analysis]
-    \item [Developing scenarios]
+    \item [Baseline Planning]: the division of work into a series of phases,
+        each of which is separated by a baseline (e.g.\ a milestone), that has well-defined
+        requirements or goals. An initial set of baselines is produced during the initiation
+        phase, which is then re-evaluated and detailed further as steps are completed and new
+        baselines reached. The technique dates back to \cite{andersen1990professional}, and is
+        analogous to planning a project in terms of milestones, goals and actionable items. This
+        particular technique is a recurring task of the entire design project.
+
+    \item [In-situ interview]: interviews are one of the most frequently used techniques in IT 
+        design, particularly qualitative interviews\cite{bodker2004participatory}. An in-situ
+        interview is one that occurs \textit{at} the workplace, as opposed to occurring at a
+        remote location away from the work environment. The purpose of such an interview is often
+        to clarify current work practice, tasks and function. Interviews are often transcribed as-is
+        or summarized into a list of points.
+
+    \item [Observation]: an observation provides first-hand experience of concrete work practices,
+        either that of the existing workflow or of a prototype or newly implemented system. Observation
+        is a potentially time-consuming task, and care must be taken about how and what to record or transcribe
+        as the immediate result of the observation. Observations can thus result in either video, audio or text,
+        depending on what makes sense.
+
+    \item [Diagnostic Mapping]: a diagnostic map focuses on problem areas, causes of those problems, their consequences
+        and subsequently one or more proposals for solutions. This technique applies primarily to the in-depth analysis phase,
+        to relate problems and solutions in an easy-to-read fashion. Each row in a diagnostic map potentially represents a story 
+        that can be read using narrative such as, '\textbf{X} is a problem, caused by \textbf{A},\textbf{B} and \textbf{C}, having 
+        the consequence of \textbf{F}. So we should solve \textbf{X} by doing \textbf{Y}'. \todo{MGG: It's clear to me that a diagnostic
+        map lacks the prioritization of a risk assessment. I think this is a problem with a diagnostic map!}
+    \item [Market study]:
+    \item [Think-aloud experiment]: as the name implies, a think-aloud experiment is one in which a subject performs
+        a series of tasks and expresses as much of their decision process as they can, whilst completing tasks. The
+        purpose is often to get inside the mind of the subject, by gaining insight into the \textit{reasons} for performing
+        actions or for continuing down a certain path of action. It also provides first-hand insight into current work practices.
+    \item [Document analysis]:
+    \item [Developing scenarios]:
     \item [Experimenting with prototypes]
-    \item [Workshop]
-    \item [Future workshop]
+    \item [Workshop]: a workshop is usually a focused, collaborative effort towards a specific kind of result. For example,
+        one topic for a workshop could be the exploration of one particular component in the existing IT infrastructure. Drawings
+        often result from a workshop, which bears resemblance to a focused brainstorm of either existing or proposed, new functionality.
+
+    \item [Future workshop]: a future workshop is a technique used to allow a group of individuals to identify a problem area, and over
+        the course of some period of time (e.g.\ 2 days), come up with a joint overview of what is wrong and develop ideas towards solving
+        the problem. The technique is described in \cite{kensing1991generating}, amongst other literature. Anchoring plays a large part in
+        this technique, by bringing together members of a design group and employees to fix a problem several individuals have identified,
+        joint effort.
+ 
 \end{description}
 
 \section{From beginning to end: Our process of design} \label{sec:process}
