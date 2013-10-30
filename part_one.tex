@@ -9,6 +9,25 @@
 \subsection{Objective of the design project}
 \todo[inline]{Quick recap of the requirements from the manager, and what goals 
     the system is designed to fulfill}
+The focus of the design project is to improve upon the booking process used by 
+\gomonkey. The booking process is currently very manual and only ever handled by 
+the manager. The manager said that: 
+
+\begin{quotation}
+I don't dare letting my employees handle the bookings.
+
+\em - Michel Pascual, manager and owner of \gomonkey, 15.10.2013
+\end{quotation}
+
+He is afraid they will make mistakes, since the process is complex and not very 
+well documented. Some bookings may also contain cases which the manager is not 
+yet sure of how should be handled, and thus needs an authority to handle and  
+produce a best practice for \gomonkey. While the manager does spend a lot of
+time handling bookings, this takes time from actually evolving the business.
+The goal of the design project is to put the booking process into a 
+well defined system and reduce the complexity and time required for handling
+incoming bookings. This will reduce the workload put on the manager, thus 
+empowering him to focus on other areas of the business.
 
 \subsection{Results from the in-line analysis}
 \todo[inline]{What areas of the business exists, and what problems do they 
@@ -42,10 +61,21 @@ need another payment processor.
 
 \item[onlinebooq.dk]
 The second promising booking system was onlinebooq.dk. They support selling 
-'services', but unfortunately they only support selling one of each serving, i
-making it useless in this case, since the price is calculated from the amount of
-people utilizing each service. It does support paypal and quickpay, but this 
-doesn't matter if we cannot calculate the price correctly.
+'services', but unfortunately they only support selling one of each servive.
+This can be seen in figure \autoref{fig:onlinebooq} as the checkbox, next to the 
+service in question. This makes it useless for \gomonkey, since the price is 
+calculated from the amount of people utilizing each service. It does support 
+paypal and quickpay, but this doesn't matter if we cannot calculate the price 
+correctly.
+
+\todo[inline]{Remove border around figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/onlinebooq.png}
+	    \caption{Screenshot from testing onlinebooq.dk.}
+        \label{fig:onlinebooq}
+\end{figure}
+		
 
 \item[Cyberbooking]
 The last booking system we tested was Cyberbooking. They have two types of 
