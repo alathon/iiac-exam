@@ -22,7 +22,7 @@ I don't dare letting my employees handle the bookings.
 He is afraid they will make mistakes, since the process is complex and not very 
 well documented. Some bookings may also contain cases which the manager is not 
 yet sure of how should be handled, and thus needs an authority to handle and  
-produce a best practice for \gomonkey. While the manager does spend a lot of
+produce a best practice for \gomonkey{}. While the manager does spend a lot of
 time handling bookings, this takes time from actually evolving the business.
 The goal of the design project is to put the booking process into a 
 well defined system and reduce the complexity and time required for handling
@@ -36,10 +36,10 @@ domains are defined within the business. This will help the designers to
 better understand the reasoning behind current work practices and how to 
 solve the problems that arise. The most noteable parts of the results from 
 the in-line analysis is the business strategy and the overview of the work 
-domains of \gomonkey.
+domains of \gomonkey{}.
 
 \subsubsection{Business strategy}
-The business strategy of \gomonkey was not written down before we started the
+The business strategy of \gomonkey{} was not written down before we started the
 project, so we had to construct and interpret on our perception of the company.
 This changed during the course of the design project, and this is the final 
 result:
@@ -108,7 +108,7 @@ standard system, which is described later in this section.
 \subsubsection{Work practices and their problems}
 
 \subsubsection{Finding a suitable standard systems}
-It is always a good solution to find a standard system which solves the problem 
+It is often a good solution to find a standard system which solves the problem 
 at hand. This can save a lot of time and money, and can quickly solve a complex
 problem.
 We compiled a list of possible standard systems and isolated three very possible
@@ -117,7 +117,7 @@ of them fulfill the defined requirements in the design project. The testing
 session included creating a free temporary booking system. All systems tend to 
 have this feature, so potential customers can evaluate the usefullness prior to 
 paying. Attempts were then made to setup the system to support the needs of
-\gomonkey, and after testing the usefullness of the result, we could conclude
+\gomonkey{}, and after testing the usefullness of the result, we could conclude
 upon the advantages and disadvantages of implementing the system.
 
 \begin{description}
@@ -139,7 +139,7 @@ need another payment processor.
 The second promising booking system was onlinebooq.dk. They support selling 
 'services', but unfortunately they only support selling one of each servive.
 This can be seen in \autoref{fig:onlinebooq} as the checkbox, next to the 
-service in question. This makes it useless for \gomonkey, since the price is 
+service in question. This makes it useless for \gomonkey{}, since the price is 
 calculated from the amount of people utilizing each service. It does support 
 paypal and quickpay, but this doesn't matter if we cannot calculate the price 
 correctly.
@@ -163,15 +163,36 @@ since the amount of resources aren't limited to one group of customers, and
 the times of bookings are very flexible.
 \end{description}
 
-While none of the systems fit with \gomonkey's business, we attempted
-to find a way to adjust \gomonkey's business to the systems. This was not 
+While none of the systems fit with \gomonkey{}'s business, we attempted
+to find a way to adjust \gomonkey{}'s business to the systems. This was not 
 successful and would alter the work practices in a very negative way.
 
 
 \section{The coherent vision}
+The coherent vision we suggest here is based on the results from the in-line 
+analysis and in-depth analysis. The vision is a suggestion for a system design, 
+along with descriptions of any expected organizational additions and changes 
+resulting from implemeting the system. It also includes reflections upon 
+required qualifications of anyone who will have to interact with the system
+and what advantages and disadvantages this will enforce thoughout the company.
+Finally, it includes some financial figures and an implementation plan. This 
+should give the required knowledge of the system to perform an informed choice
+on wether to start the project.
+
 \subsection{Technology and systems}
+This section will describe the system itself, what it does and how it looks,
+along with what is required to keep the system running.
+
 \subsubsection{IT systems and platform}
 \todo[inline]{What do we need for running the system. Servers, software, etc}
+The owner of \gomonkey insists that the main website continues to run on the 
+WordPress which is hosted with One.com. This is a fine solution, and will make
+sure that the website maintains it's current, existing Google page-rank.
+
+Further, we need a server for hosting the new system, which can not be developed
+and run on the One.com server. For this, we will need a server with a database
+and a webserver. Preferably, a server with root access, but a server with the 
+necessary interfaces to the previously mentioned items will be sufficient.
 
 \subsubsection{Functions of the system}
 \todo[inline]{Describe what the system does}
