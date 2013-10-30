@@ -42,10 +42,21 @@ need another payment processor.
 
 \item[onlinebooq.dk]
 The second promising booking system was onlinebooq.dk. They support selling 
-'services', but unfortunately they only support selling one of each serving, i
-making it useless in this case, since the price is calculated from the amount of
-people utilizing each service. It does support paypal and quickpay, but this 
-doesn't matter if we cannot calculate the price correctly.
+'services', but unfortunately they only support selling one of each servive.
+This can be seen in figure \autoref{fig:onlinebooq} as the checkbox, next to the 
+service in question. This makes it useless for \gomonkey, since the price is 
+calculated from the amount of people utilizing each service. It does support 
+paypal and quickpay, but this doesn't matter if we cannot calculate the price 
+correctly.
+
+\todo[inline]{Remove border around figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/onlinebooq.png}
+	    \caption{Screenshot from testing onlinebooq.dk.}
+        \label{fig:onlinebooq}
+\end{figure}
+		
 
 \item[Cyberbooking]
 The last booking system we tested was Cyberbooking. They have two types of 
