@@ -8,19 +8,18 @@
 section aims to provide. 1/2 to 1 page.}
 
 Part two of this report explores the question of \textit{why}
-the design process occured as it did. We attempt to provide a
-partial answer to this question by considering
-\begin{inparaenum}[1)]
-\item what is a design process
-\item a general description of techniques used in the design process
-\item an overview of the entire design process from start til end
-\item a detailed look at a few of the key choices and techniques employed.
-\end{inparaenum}
+the design process occured as it did. In section~\ref{sec:participatory}
+we consider what a design process is, in section~\ref{sec:overview}
+we provide a general description of techniques used in the design process,
+in section~\ref{sec:process} we describe how the authors realized an IT design
+project using the \must{} method and in section~\ref{sec:detailed} we
+look at a few of the key choices and techniques that were employed while working
+on the design report.
 
 The reader is expected to be familiar with details about \gomonkey{} 
-from part one of the report.
+from ``Part one: Design Project''.
 
-\section{Participatory design in IT}
+\section{Participatory design in IT} \label{sec:participatory}
 \todo[inline]{Describe what participatory design is, describe the
 phases of design proposed by the course book and what each phase
 represents and why each phase is important.}
@@ -29,20 +28,10 @@ IT projects vary widely in size, shape and form. From the potentially small, pai
 setup of Google Apps for a company of 3 employees, to the large-scale migration of
 Jyske Bank's IT infrastructure after 2 years of planning\cite{jyskebank}.
 A large portion of the work done in this report is based upon the general
-practices and techniques proposed by \cite{bodker2004participatory}. In the book
-they describe a search for techniques, concepts and ideologies which may apply
-to the design and planning of IT projects on a general level. A specific method called 
-\must{}\footnote{(a Danish acronym for theories and methods of initial analysis and 
-design activities)} is proposed consisting of an
-\begin{inparaenum}[1)]
-\item initiation phase
-\item in-line analysis phase
-\item in-depth analysis phase and
-\item innovation phase.
-\end{inparaenum}
-
-\cite{bodker2004participatory} define an IT design project as
-
+practices and techniques of participatory design as proposed by \cite{bodker2004participatory}.
+B\"o dker et al. describe a search for techniques, concepts and ideologies which may apply
+to the \textbf{design and planning} of IT projects on a general level. They
+define an IT design project as
 \begin{figure*}[h!]
     \centering
     \textbf{IT design project}: A project conducted at a company that reveals
@@ -50,15 +39,77 @@ design activities)} is proposed consisting of an
     sustainable uses of IT based on a specific problem within the company.
 \end{figure*}
 
-Section~\ref{sec:process} describes how the authors realized an IT design
-project using the \must{} method for \gomonkey{}. Readers are encouraged to read 
-\cite{bodker2004participatory} for a more complete picture of how \must{} works 
-as a general concept.
+The \must{}\cite{bodker2004participatory} method consists of an
+\begin{inparaenum}[1)]
+\item initiation phase
+\item in-line analysis phase
+\item in-depth analysis phase and
+\item innovation phase.
+\end{inparaenum}
+It seeks to provide a perspective on IT design where you view IT projects not
+just through the lens of what a prospective client wishes done, but also take into
+account the work environment, the organization as a whole, the interaction
+between company and customers and subsequent changes and impacts that making
+alterations to a work environment can result in. As a whole, participatory
+design adopts an ethnographic approach to design, encouraging the designer to
+get up close and personal.
 
-\section{Overview of techniques employed}
+These goals are supported by four guiding principles: the principle of a coherent 
+vision, the principle of genuine user participation, the principle of firsthand
+experience and the principle of anchoring visions. The four principles will not
+be described in length here, instead some of the benefits are described below.
+
+\begin{description}
+    \item [The coherent vision] mandates that the existing IT systems, the work organization 
+        and the qualifications of employees be taken into account. Amongst other things, 
+        this helps avoid a common pitfall of a new IT system requiring training of employees 
+        because they lack the skills to make use of it. 
+    \item [Genuine user participation] (TODO: WRITE STUFF HERE)
+    \item [Firsthand experience with work practices] realizes that being told
+        about how something occurs is not the same as reading about it, nor is
+        it the same as actually experiencing the practice first-hand. All three
+        approaches are applicable and should occur in a design project, but
+        there may be factors influencing a re-telling of work practices or a
+        written description that only surface during first-hand experience such
+        as an interview, an observation or a think-aloud experiment.
+    \item [Anchoring visions] (TODO: WRITE STUFF HERE)
+\end{description}
+
+The purpose of an IT design project is \textbf{not} to end up with a
+finished implementation or actual, implemented alterations to company work
+practice, but to provide a report that allows a company to make an
+\textbf{informed choice} about a specific strategy or implementation plan to
+adopt. Such a choice is an exercise in risk management. In 1995, The Standish
+Group found the top four reasons for project success were user involvement,
+executive management support, clear statement of requirements and proper
+planning\cite{standish1995chaos}. Conversely, the top four reasons for failure
+were found to be incomplete requirements, lack of user involvement, lack of
+resources and unrealistic expectations respectively\cite{standish1995chaos}.
+These kinds of failures are often accompanied by a very real, costly risk. In
+2005 Bronte-Steward proposed that approximately \$500 billion was wasted
+worldwide each year on IT purchases that failed to reach their
+objectives\cite{bronte2005developing}. In 2006, the number of successful
+projects as measured by The Standish Group\cite{standish2012} had increased to
+37\%, attributed primarily to the same four factors of success as they had
+proposed in 1995. There are different ways to approach solving the reasons for
+failure proposed by The Standish Group as well as how to reach the elements of
+success. One common approach is to focus on the \textit{implementation} stage of
+software projects and improve the development process itself, seen in the form
+of e.g.\ agile development. Another is to focus on the \textit{planning} stage
+of software projects, which is what \must{} and this report concern themselves with.
+
+Readers are encouraged to read \cite{bodker2004participatory} for a more
+wholesome description of how \must{} works, including the five principles of a
+coherent vision, genuine user participation, firsthand experience and anchoring
+visions. 
+
+\section{Overview of techniques employed} \label{sec:overview}
 \todo[inline]{Describe a little about design techniques in general, cite
 the coursebook and relevant articles. 3-6 sentences}
 
+The \must{} method describes 16 specific techniques which are organized into
+phases, principles, knowledge areas and the tools used to represent them. Many
+of the techniques 
 The techniques listed below were used in one or more of the design phases.
 \todo[inline]{Below: Describe every technique used and how it was used, cite 
 relevant articles for other uses or longer description}
@@ -80,25 +131,26 @@ relevant articles for other uses or longer description}
 \todo[inline]{Describe what we did from the very beginning
 til the end. 2-3 pages}
 
-\section{Combining the in-depth and innovation phases}
+\section{A detailed look at key choices and techniques} \label{sec:detailed}
+\subsection{Combining the in-depth and innovation phases}
 \todo[inline]{Describe how we combined the in-depth and
 innovation phases, and how the literature also supports
 this in certain cases. 2-3 pages}
 
-\section{Ethnographically inspired analysis}
+\subsection{Ethnographically inspired analysis}
 \todo[inline]{Describe how to combine techniques to provide
 an ethnographically inspired analysis. It is not good enough
 to know \textit{what} they do, we must also know \textit{why}.
 1-2 pages}
 
-\section{Observation as a technique}
+\subsection{Observation as a technique}
 \todo[inline]{Describe how observation works as a technique.
 Describe how others have used observation to positive effect.
 Describe how we have used observation, and what some of the
 pitfalls are. Briefly cite and describe one alternative to
 observation. 1-2 pages}
 
-\section{User stories as a technique}
+\subsection{User stories as a technique}
 \todo[inline]{Describe how user stories work as a technique
 to provide overview and structure workflow. Describe how we
 performed this and provide relevant sources for others who
