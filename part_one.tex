@@ -115,7 +115,70 @@ standard system, which is described later in this section.
 
 \subsubsection{Work practices and their problems}
 
-\subsubsection{Finding a suitable standard systems}
+\begin{description}
+\item[Initial Booking]
+A potential customer which has landed on the website can initiate a booking
+by accessing the booking form. He then has to fill in his name, e-mail, phone number, 
+the desired booking date and time, the number of persons that will be joining and their
+age span along with any additional notes he might have. The interface isn't state of the art 
+and does not provide error recoverability, which is a great usability concern and is 
+strongly encouraged. After the user has managed to fill in the form, he is taken to a confirmation
+page and two emails are sent: one to the manager with the booking information from the form and
+one to the customer informing them that \gomonkey  has received their booking request. The process
+cand be followed in \autoref{fig:customer}.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{figures/customer.png}
+            \caption{Overview of an initial booking.}
+        \label{fig:customer}
+\end{figure}
+
+\item[Processing a booking]
+The manager reads the booking request email and contacts the customer to provide additional
+information if the booking request does not have all the required data. The manager and the 
+customer communicate over email until both parties are satisfied with the terms of the booking.
+An overview of this can be seen in \autoref{fig:manager}. This manual gathering of additional
+booking information can be avoided by building a more complex booking system. After the customer
+has supplied all the requested information, the manager then enters the information in Google
+Calendar, linking the email with the event. A confirmation email is sent to the customer to
+inform him the booking is scheduled.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{figures/manager.png}
+            \caption{Overview of a booking processing.}
+        \label{fig:manager}
+\end{figure}
+
+\item[Processing payment]
+As seen in \autoref{fig:payment}, the manager is also the one who is processing payments. Every two days,
+he logs into his netbank account and associates transactions with their respective bookings in Google Calendar. 
+Sometimes customers forget to write their name on their transaction and that causes some distress as the
+manager cannot identify the customer. Having to do everything manually leaves room for human error,
+a situation which should be avoided. Finally, the manager colors the event associated with the booking
+in Google Calendar and changes its description to reflect payment status.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{figures/payment.png}
+            \caption{Overview of payment processing.}
+        \label{fig:payment}
+\end{figure}
+
+\item[Handling booked customers]
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=\textwidth]{figures/handling.png}
+            \caption{Overview of customer handling}
+        \label{fig:handling}
+\end{figure}
+ref \autoref{fig:handling}
+
+\end{description}
+
+\subsubsection{Finding a suitable standard system}
 It is often a good solution to find a standard system which solves the problem 
 at hand. This can save a lot of time and money, and can quickly solve a complex
 problem.
