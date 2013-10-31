@@ -5,7 +5,7 @@
 \textbf{\LARGE{{Part two: Analysis, discussion and reflection}}}\\
 
 Part two of this report explores the question of \textit{why}
-the design process occured as it did. In section~\ref{sec:participatory}
+the design process occurred as it did. In section~\ref{sec:participatory}
 we consider what a design process is, in section~\ref{sec:overview}
 we provide a general description of techniques used in the design process,
 in section~\ref{sec:process} we describe how the authors realized an IT design
@@ -17,29 +17,31 @@ The reader is expected to be familiar with details about \gomonkey{}
 from ``Part one: Design Project''.
 
 \section{Participatory design in IT} \label{sec:participatory}
-IT projects vary widely in size, shape and form. From the potentially small, painless 
-setup of Google Apps for a company of 3 employees, to the large-scale migration of
-Jyske Bank's IT infrastructure after 2 years of planning\cite{jyskebank}.
-A large portion of the work done in this report is based upon the general
-practices and techniques of participatory design as proposed by \cite{bodker2004participatory}.
-B\"o dker et al.\ describe a search for techniques, concepts and ideologies which may apply
-to the \textbf{design and planning} of IT projects on a general level. They
-define an IT design project as
+IT projects vary widely in size, shape and form. From the potentially small,
+painless setup of Google Apps for a company of 3 employees, to the large-scale
+migration of Jyske Bank's IT infrastructure after 2 years of
+planning\cite{jyskebank}. This makes the task of providing \textit{generic}
+advice a difficult one. A large portion of the work done in this report is based
+upon the practices and techniques of participatory design as proposed by
+\cite{bodker2004participatory}.  B\o dker et al.\ describe a search for
+techniques, concepts and ideologies which may apply to the \textbf{design and
+planning} of IT projects on a general level. They define an IT design project as
 %%
 \vspace{5mm}
 \begin{framed}
     \textbf{IT design project}: A project conducted at a company that reveals
     goals, defines problems, and indicates solutions, with the aim of designing
-    sustainable uses of IT based on a specific problem within the company.
+    sustainable uses of IT based on a specific problem within the company. - B\o
+    dker et al. (2004)
 \end{framed}
 \vspace{5mm}
 %%
-The \must{}\cite{bodker2004participatory} method consists of an
+The \must{}\cite{bodker2004participatory} method consists of
 \begin{inparaenum}[1)]
-    \item initiation phase
-    \item in-line analysis phase
-    \item in-depth analysis phase and
-    \item innovation phase.
+    \item an initiation phase
+    \item an in-line analysis phase
+    \item an in-depth analysis phase and
+    \item an innovation phase.
 \end{inparaenum}
 It seeks to provide a perspective on IT design where you view IT projects not
 just through the lens of what a prospective client wishes done, but also take into
@@ -53,13 +55,11 @@ These goals are supported by four guiding \textbf{principles}.
 \begin{description}
     \item [The principle of a coherent vision] is concerned with making sure that stakeholders
         and employees come together in a joint venture to innovate, with the aim
-        of providing a coherent vision of the future. This mandates that the existing IT systems, 
-        the work organization  and the qualifications of employees be taken into
-        account. This principle is fundamentally quite similar to anchoring a
-        vision, in that the two seem likely to occur in tandem. Anchoring
-        employees is an important part of building a coherent vision, and
-        building a coherent vision involves the employees and hopefully has the
-        effect of anchoring them.
+        of providing a coherent vision of the future. There are several
+        important points to this; a vision for change is not just a single IT
+        system or implementation, but is a part of a whole that encompasses the
+        organization, the employees, the work practices, the technology and
+        systems. 
     \item [The principle of genuine user participation] is about using mutual learning activities
         to teach employees about technical options, issues and solutions and to
         teach the designers about the work that the employees are doing. There are
@@ -77,14 +77,15 @@ These goals are supported by four guiding \textbf{principles}.
     \item [The principle of anchoring visions] views the design process as a mutual learning
         process between all members of the project group, in order to gain a
         common understanding of the results produced by the design
-        project\cite{bodker2004participatory}. This serves both to eliminate
-        misunderstandings and to eliminate uncertainty that employees or management
-        may have about proposed changes, instead transforming uncertainties into
-        a positive work atmosphere aimed at improvement and innovation. The
-        importance of this factor is underlined by other research such as
-        \cite{standish20012}, who list the emotional maturity and ecosystem of
-        the project as one of the most important components of successful IT
-        projects.
+        project\cite{bodker2004participatory}. Anchoring is about motivating,
+        about making all participants in the design process \textbf{care}. This
+        serves both to help eliminate misunderstandings and uncertainty
+        that employees or management may have about proposed changes, instead
+        transforming uncertainties into a positive work atmosphere aimed at
+        improvement and innovation. The importance of this factor is underlined
+        by other research such as \cite{standish20012}, who list the emotional
+        maturity and ecosystem of the project as one of the most important
+        components of successful IT projects.
 \end{description}
 
 The purpose of an IT design project is \textbf{not} to end up with a
@@ -98,21 +99,20 @@ planning\cite{standish1995chaos}. Conversely, the top four reasons for failure
 were found to be incomplete requirements, lack of user involvement, lack of
 resources and unrealistic expectations respectively\cite{standish1995chaos}.
 They also found that only about \textbf{19\%} of IT projects succeeded on-budget
-and on-time. These kinds of failures are often accompanied by a very real, costly risk. 
-In 2005, Bronte-Steward proposed that approximately \$500 billion was wasted
-worldwide each year on IT purchases that failed to reach their
-objectives\cite{bronte2005developing}. In 2006, the number of successful
-projects as measured by The Standish Group\cite{standish2012} had increased to
-\textbf{37\%}, attributed in part to the same four factors of success as they had
-proposed in 1995. 
+and on-time\cite{standish1995chaos}. These kinds of failures are often
+accompanied by a very real, costly risk.  In 2005, Bronte-Steward proposed that
+approximately \$500 billion was wasted worldwide each year on IT purchases that
+failed to reach their objectives\cite{bronte2005developing}. In 2006, the number
+of successful projects as measured by The Standish Group\cite{standish2012} had
+increased to \textbf{37\%}, attributed in part to the same four factors of
+success as they had proposed in 1995. 
 
-There are many different ways to try and prevent the causes of failure 
-proposed by The Standish Group. One is to focus on the \textit{implementation} stage of
-software projects and improve the development process itself, e.g.\ the
-innovation of methods such as agile development. Another is to focus on the
-\textit{planning} stage of software projects, which is what \must{} and this
-report concern themselves with, not only to prevent failure but to provoke
-success.
+One avenue for moving towards better project success rate, is to focus on
+improving the \textit{implementation} stage of software projects and improve the
+development process itself, e.g.\ the innovation of methods such as agile
+development. Another is to focus on the \textit{planning} stage of software
+projects, which is what \must{} and this report concern themselves with, not
+only to prevent failure but to provoke success.
 
 Readers are encouraged to read \cite{bodker2004participatory} for a more
 wholesome description of how the \must{} method works.
@@ -124,9 +124,18 @@ has pros and cons as far as information gathering, information organization or d
 is concerned. Some techniques apply to specific phases of the \must{} method, and others
 are relevant throughout the lifetime of the design project.
 
-The techniques listed below were used in one or more of the design phases.
+The activities listed below took place during the design project.
 \begin{description}
-    \item [Baseline Planning]: the division of work into a series of phases,
+    \item [Market study]: Market studies aim to clarify the current state of a
+        domain, by doing research on competitors, market maturity and similar.
+        As an activity it has broad application, in this report we are more
+        specifically concerned with market studies of standard IT systems that
+        provide a certain kind of functionality, namely booking.
+\end{description}
+
+The techniques listed below were used in the design project.
+\begin{description}
+    \item [Baseline Planning] The division of work into a series of phases,
         each of which is separated by a baseline (e.g.\ a milestone), that has well-defined
         requirements or goals. An initial set of baselines is produced during the initiation
         phase, which is then re-evaluated and detailed further as steps are completed and new
@@ -134,59 +143,69 @@ The techniques listed below were used in one or more of the design phases.
         analogous to planning a project in terms of milestones, goals and actionable items. This
         particular technique is a recurring task of the entire design project.
 
-    \item [In-situ interview]: interviews are one of the most frequently used techniques in IT 
+    \item [In-situ interview] Interviews are one of the most frequently used techniques in IT 
         design, particularly qualitative interviews\cite{bodker2004participatory}. An in-situ
         interview is one that occurs \textit{at} the workplace, as opposed to occurring at a
         remote location away from the work environment. The purpose of such an interview is often
         to clarify current work practice, tasks and function. Interviews are often transcribed as-is
         or summarized into a list of points.
 
-    \item [Observation]: an observation provides first-hand experience of concrete work practices,
-        either that of the existing workflow or of a prototype or newly implemented system. Observation
-        is a potentially time-consuming task, and care must be taken about how and what to record or transcribe
-        as the immediate result of the observation. Observations can thus result in either video, audio or text,
-        depending on what makes sense.
+    \item [Observation] An observation provides first-hand experience of
+        concrete work practices, either that of the existing workflow or of a
+        prototype or newly implemented system. Observation is a potentially
+        time-consuming task, and care must be taken about how and what to record
+        or transcribe as the immediate result of the observation. Observations
+        can thus result in either video, audio or text, depending on what makes
+        sense.
 
-    \item [Diagnostic Mapping]: a diagnostic map focuses on problem areas, causes of those problems, their consequences
-        and subsequently one or more proposals for solutions. This technique applies primarily to the in-depth analysis phase,
-        to relate problems and solutions in an easy-to-read fashion. Each row in a diagnostic map potentially represents a story 
-        that can be read using narrative such as, '\textbf{X} is a problem, caused by \textbf{A},\textbf{B} and \textbf{C}, having 
-        the consequence of \textbf{F}. So we should solve \textbf{X} by doing \textbf{Y}'. \todo{MGG: It's clear to me that a diagnostic
-        map lacks the prioritization of a risk assessment. I think this is a problem with a diagnostic map!}
+    \item [Diagnostic Mapping] A diagnostic map focuses on problem areas, causes
+        of those problems, their consequences and subsequently one or more
+        proposals for solutions. This technique applies primarily to the
+        in-depth analysis phase, to relate problems and solutions in an
+        easy-to-read fashion. Each row in a diagnostic map potentially
+        represents a story that can be read using narrative such as, '\textbf{X}
+        is a problem, caused by \textbf{A},\textbf{B} and \textbf{C}, having the
+        consequence of \textbf{F}. So we should solve \textbf{X} by doing
+        \textbf{Y}'. 
+        \todo{MGG: It's clear to me that a diagnostic map lacks the
+        prioritization of a risk assessment. I think this is a problem with a
+        diagnostic map!}
 
-    \item [Market study]: a market study is not listed as an explicit \textit{technique} by \cite{bodker2004participatory}, but often
-        occurs in relation to IT projects to scope out prospective possibilities
-        for target systems \todo[inline]{MGG: We need a source on that!}. Sometimes designing a custom system
-        is the correct solution, while other times seeking out an existing solution and either using it as-is or tailoring it to use is
-        the more sensible approach. A market study attempts to provide an unbiased evaluation of a number of different products or systems,
-        such that they may later be compared more directly with the prioritized goals and aims of, in this case, a design report.
+    \item [Think-aloud experiment] A think-aloud experiment is one in which a
+        subject performs a series of tasks while expressing as much of their
+        decision process as they can. The purpose is often to gain insight into
+        the \textit{reasons} for performing actions or for continuing down a
+        certain path of action. One possible application is to gain first-hand
+        insight into current work practices.
 
-    \item [Think-aloud experiment]: as the name implies, a think-aloud experiment is one in which a subject performs
-        a series of tasks and expresses as much of their decision process as they can, whilst completing tasks. The
-        purpose is often to get inside the mind of the subject, by gaining insight into the \textit{reasons} for performing
-        actions or for continuing down a certain path of action. It also provides first-hand insight into current work practices.
+    \item [Document analysis] A lot of potentially interesting and relevant
+        information is often \textit{hidden away} in documents that occur as
+        part of a work practice. Permission slips and responsibility waivers,
+        booking forms and so on. Document analysis aims to extract pertinent
+        information from one or more documents that are part of the work
+        practice. For example, annual reports and organizational diagrams may
+        help tell the design group about the company as a whole, while specific
+        documents used as part of a task may help shed light on the way that
+        task occurs and the flow of information either inside the company or
+        between customer and company.
 
-    \item [Document analysis]: a lot of potentially interesting and relevant information is often \textit{hidden away} in documents
-        that occur as part of a work practice. Permission slips and responsibility waivers, booking forms and so on. Document analysis
-        aims to extract pertinent information from one or more documents that are part of the work practice. There are a large number of
-        different kinds of documents associated with a company, and different documents help provide different information. Annual reports
-        and organizational diagrams may help tell the design group about the company as a whole, while specific documents used as part of
-        a task may help shed light on the way that task occurs and the flow of information either inside the company or between customer
-        and company.
-
-    \item [Developing scenarios]: this technique originates with \cite{clausen1993narratives} and revolves around creating
+    \item [Developing scenarios] This technique originates with \cite{clausen1993narratives} and revolves around creating
         prose-style representations exemplifying a certain work practice, under future use of the system. This both anchors employees
         and helps develop a coherent vision of the future for all participants of the design group. A more common name for this technique
         is possibly the development of \textit{user stories} or \textit{usecases}, which embody a similar if not the same intent.
 
-    \item [Experimenting with prototypes]: a mockup-based prototype can provide
-        valuable information, if for example, it is applied to a number of user
-        stories that an employee tries to get through. This technique helps
-        anchor employees, generate ideas for usage and correct mistakes about
-        workflow and organization. \cite{bodker2004participatory} differentiates
-        between horizontal (a non-functional prototype) and vertical prototypes,
-        and under that definition a mockup-based prototype is a
-        \textbf{horizontal prototype}.
+    \item [Experimenting with prototypes] A horizontal
+        prototype\cite{bodker2004participatory} is one which has no real
+        functionality, such that any functionality or interaction with the
+        prototype must be \textbf{simulated} (e.g.\ a paper-based mockup
+        prototype). A vertical prototype\cite{bodker2004participatory} is one
+        that has functionality and is based in a real IT-based solution that
+        functions, at least partially. Experimenting with a prototype can
+        provide valuable information, either in a structured manner by walking
+        through specific usecases, or as a more workshop-oriented approach where
+        a model is examined and discussed in plenum for benefits of
+        brainstorming, correcting misunderstandings and more. The technique also
+        helps anchor employees.
 \end{description}
 
 \section{From beginning to end: The design process} \label{sec:process}
@@ -194,11 +213,11 @@ The following is written in a narrative style, as the purpose is to
 walk the reader through the sequence of events as they occured from one
 to the next. To avoid mixing reflection and an account of things that happened,
 the narrative is split into a section for each phase followed by reflection on
-that particular phase (or set of phases, for in-depth analysis and innovation).
+that particular phase.
 
 \subsection{The initiation phase}
 \gomonkey{} was contacted by the authors because they had a contact at the
-company and the website \url{http://www.gomonkey.dk} showed obvious issues with
+company and the website \url{www.gomonkey.dk} showed obvious issues with
 regards to the booking system. Suspicions were confirmed over the telephone,
 where the owner and manager at \gomonkey{}, Michel, agreed to an initial in-situ
 meeting. The meeting was to establish grounds for a design project, focused on
@@ -206,7 +225,7 @@ the booking system of the \gomonkey{} website. A qualitative, unstructured
 in-situ interview was conducted between two of the authors and Michel, to
 introduce the prospect of a design project, to establish a common level of
 expectation and to verify the problem first-hand. Notes were taken on paper
-during the interview, which were later translated into a summary of points that
+during the interview, which were later transcribed into a summary of points that
 described: the managers description of customer bookings, the managers
 description of his own workflow, the existing IT infrastructure of \gomonkey{},
 the company organization, a list of competitors and minor notes on auxiliary
@@ -240,6 +259,14 @@ of the design team (the authors) and a list of stakeholders and participants.
         because the project was on a short deadline, making sure to clearly
         establish scope from the get-go could have had an important effect on
         how the remaining time was spent.
+
+    \item [Building a baseline plan] The initial interview with the manager
+        provided the basis for the construction of a baseline plan. As
+        \cite{bodker2004participatory} notes, such a plan is initially quite
+        vague, gaining in specificity as the project ages and matures. Enough
+        information was uncovered during the interview to successfully create a
+        baseline plan, even if that information would be invalidated at a later
+        stage when uncovering new information.
 \end{description}
 
 \subsection{The in-line analysis phase}
@@ -281,13 +308,13 @@ systems and a list of relevant work domains.
 \end{description}
 
 \subsection{The in-depth analysis and innovation phase}
-The starting point for the in-depth analysis and innovation phase of \gomonkey{} 
-was the identified work domains, IT systems and business goals from the in-line analysis. 
-To gain a more in-depth understanding of how booking at \gomonkey{} works and clarify work
-practices in general, a number of techniques were used:
+The starting point for the in-depth analysis and innovation phase was the
+identified work domains, IT systems and business goals from the in-line
+analysis.  To gain a more in-depth understanding of how booking at \gomonkey{}
+worked and clarify work practices in general, a number of techniques were used:
 
 \begin{description}
-    \item [Company visit and meeting] A company visit and meeting was held
+    \item [Meeting] A meeting was held
         between the manager, Michel, and the design team. The meeting was
         focused entirely on the booking process as a work domain, in an attempt
         to sketch out corner cases, understand the flow of communication between
@@ -303,13 +330,20 @@ practices in general, a number of techniques were used:
         here?}
 
     \item [Observation] An in-situ observation of the manager was performed,
-        to observe how the manager handles the task of receiving a booking. This
-        helped clarify the workflow from the managers point of view, and was
-        captured on video for study. An in-situ observation of the manager
-        setting up the location before customers arrived was also performed, to
-        cover details that may have been missed related to customer preparation.
-        This was also documented on video, but yielded very little useful
-        information with regards to the IT systems.
+        to observe three different work processes: 
+        \begin{inparaenum}[1)]
+            \item how the manager handles receiving a booking
+            \item how the manager checks the payment status of a booking
+            \item any work processes that occur prior to a booking arriving.
+        \end{inparaenum}
+        Almost no preparation took place to facilitate the observations, beyond
+        coming up with what cases to specifically observe. The observations
+        occured in-situ at \gomonkey{}. The design team contacted Michel by
+        phone and agreed on two times which the observations could occur, and
+        each observation was then filmed with a smartphone. The observations
+        helped clarify the workflow from the managers point of view, although
+        the third observation provided little to no information transferable
+        into an IT system context.
 
     \item [In-situ interview] An in-situ interview with the manager was
         performed, which took on a structured format and was focused on how the
@@ -344,9 +378,9 @@ completely different market. For instance, many booking systems contain a notion
 of fixed services, fixed time slots or similar. This clashes with the fluid
 booking that \gomonkey{} supports, where a customer can bring \textbf{X}
 participants of different ages, at some user-specified time. An experimentation
-with the mockup `prototype' was performed in-situ with the manager Michel, 
-leading to a large number of suggested changes to the mockups, the uncovering of
-additional usecases and cornercases, and new knowledge that was not obtained
+with a horizontal prototype, the mockups, was performed in-situ with the manager
+Michel. This leadi to a large number of suggested changes to the mockups, the uncovering of
+additional usecases and edge conditions as well as new knowledge that was not obtained
 during the in-depth analysis phase.
 
 Based upon this new knowledge, the mockups created were re-drafted into their
@@ -363,7 +397,7 @@ the \textit{why} and \textit{how}.
 \reflection{}
 %%%%
 \begin{description}
-    \item [Customer groups] The experimentation with the mockup prototype unveiled that 
+    \item [Customer groups] The experimentation with the horizontal prototype unveiled that 
         \gomonkey{} has three primary customer groups: private persons, companies and public
         institutions. For public institutions, a special invoice must be filled
         out by \gomonkey{} which requires obtaining \textit{EAN}-related details
@@ -374,7 +408,10 @@ the \textit{why} and \textit{how}.
         system was found to be confusing by the Manager, warranting a fundamental change 
         to the way information was passed back and forth between company and customer, 
         to conform more with the way many online websites support purchase of goods and 
-        subsequent confirmations.
+        subsequent confirmations. This could be construed as the company wanting
+        \textit{less} innovation, or as a pre-existing stereotype interfering
+        with the possibility of innovation. A different option is that the
+        original flow was simply bad.
 \end{description}
 
 \section{A detailed look at some key choices and techniques} \label{sec:detailed}
