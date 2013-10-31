@@ -14,7 +14,7 @@ the manager. The manager said that:
 \begin{quotation}
 I don't dare letting my employees handle the bookings!
 
-\em - Michel Pascual, manager and owner of \gomonkey, 15.10.2013
+\em - Michel Pascual, manager and owner of \gomonkey{}, 15.10.2013
 \end{quotation}
 
 He is afraid they will make mistakes, since the process is complex and not very 
@@ -241,7 +241,7 @@ While none of the systems fit with \gomonkey{}'s business, we attempted
 to find a way to adjust \gomonkey{}'s business to the systems. This was not 
 successful and would alter the work practices in a very negative way.
 
-
+\newpage
 \section{The coherent vision}
 The coherent vision we suggest here is based on the results from the in-line 
 analysis and in-depth analysis. The vision is a suggestion for a system design, 
@@ -278,18 +278,216 @@ The scheduling and journaling of staff will still be hosted in the company's
 Google Drive. 
 
 \subsubsection{Components, functions and interface}
-\todo[inline]{Pictures of mockup and descriptions of how it works}
+The system contains 5 general components;
+\begin{itemize}
+\item Booking form
+\item Booking status page
+\item Administrative overview
+\item Administrative booking status
+\item Todays bookings
+\end{itemize}
+
+The bare \textbf{booking form component} can be seen in \autoref{fig:bookinitial}. The booking
+form incorporates many of the original features and functions of the existing 
+\gomonkey booking form. The user is expected to input values for a number of 
+different fields:
+\begin{enumerate}
+	\item Name or Company (Text string)
+	\item E-mail address (Text string)
+	\item Phone number (Text string)
+	\item Day of booking (Calendar-valid date found with a calendar widget)
+	\item Starting time (Valid 24h-format time)
+	\item 0 or more participants between age 7-9, age 10-13 and age 14+, at minimum 1 participant.
+	\item How the user heard of GoMonkey (Radio box)
+	\item Optionally, food and drink can be ordered as well.
+\end{enumerate}
+
+A price calculator has been added as part of the booking form, that provides 
+a running total of the cost of the booking as well as any deposit, if the cost
+of the booking is large enough. A Frequently Asked Questions section has been 
+moved directly into the booking form, for easy viewing during booking.
+
+An example of a filled booking page can be seen in \autoref{fig:bookfilled}. The
+'Submit' button will prepare the booking, for a final view for the customer to 
+check that the information are correct. This can be seen on 
+\autoref{fig:bookconfirm}. If the user agrees to the entered information, the
+user can click 'Book' and the booking will be sent while the user is presented
+with a modal popup that informs the user that the booking will need to be confirmed,
+and that there might be a required deposit. This can be seen on 
+\autoref{fig:bookconfirmpressed}.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_initial.png}
+	    \caption{The bare booking form which the customers will find on the WordPress website.}
+        \label{fig:bookinitial}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_filled.png}
+	    \caption{The booking form is filled and ready to be submitted.}
+        \label{fig:bookfilled}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_confirmation.png}
+	    \caption{The booking form is submitted and the customer can view the entered information before finally booking.}
+        \label{fig:bookconfirm}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_confirmation_bookpressed.png}
+	    \caption{The booking form is submitted and the customer is informed about the following process.}
+        \label{fig:bookconfirmpressed}
+\end{figure}
+
+The \textbf{booking status component} on \autoref{fig:bookstatus1} looks quite similar 
+to the booking form, but the 
+user cannot make any changes to the booking. In addition to a list of all of 
+the things the user could see in the Booking form, the user can also see 
+whether \gomonkey{} has confirmed the booking or not and can pay for the deposit 
+and/or the full cost of the booking.
+
+An unconfirmed booking can not yet be paid for in any way. However, once a 
+booking is confirmed by \gomonkey{} the payment options appear, as in 
+\autoref{fig:bookstatus2}. Payment occurs 
+by clicking on either a ‘Pay Deposit’ button, or a ‘Pay full amount’ button. 
+For institutions, there is also a ‘Confirm payment via EAN’ button, which 
+allows the user to enter EAN-related details instead.
+
+Finally, when an amount has been selected, is is possible to select a preferred
+payment processor, as in \autoref{fig:bookstatus3}. This is important, since 
+instant online transactions are very
+critical to the function of the system.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_payment_1.png}
+	    \caption{The customer can see the booking, but can't pay until the date and time has been confirmed.}
+        \label{fig:bookstatus1}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_payment_2.png}
+	    \caption{The customer is now able to select the desired amount to be paid, prior to visiting the park.}
+        \label{fig:bookstatus2}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_payment_3.png}
+	    \caption{Finally, the customer can select a preferred payment processor and pay instantly.}
+        \label{fig:bookstatus3}
+\end{figure}
+
+The \textbf{administrative overview component} displays the incoming bookings which require an 
+action from the manager, and can be seen in \autoref{fig:adminoverview}. The 
+date, time and amount of people is shown for quick confirmation, and is needed,
+each booking can be entered and scrutinized with the administrative booking status.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/overview_important.png}
+	    \caption{The manager get a good overview of the incoming bookings which requires an action.}
+        \label{fig:adminoverview}
+\end{figure}
+
+The \textbf{adminstrative booking status component} describes a booking in full and allows the
+\gomonkey{} manager to either confirm a booking or decline it, based on the 
+calendar overview presented next to the confirmation box. This can be seen in
+\autoref{fig:admin}. 
+
+If the manager accepts a booking, an e-mail will be sent to the user notifying 
+them of this, and the user-viewable booking status page will reflect that the 
+booking has been accepted. The booking is now open for the user to pay 
+deposit/full amount. This can be seen in \autoref{fig:adminconfirmed}.
+
+If the manager declines a booking, an e-mail will be sent to the user notifying 
+them of this, and the user-viewable booking status page will reflect that the 
+booking has been declined. The manager can supply a reason at the time of 
+declining, with either a standard response, or a manual response with a
+suggested alternative time and date. This can be seen in \autoref{fig:admindecline}
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/admin_booking.png}
+	    \caption{The manager can view the booking and see the calendar dates surrounding the booking.}
+        \label{fig:admin}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/admin_booking_confirmed.png}
+	    \caption{The manager has confirmed and the customer can now pay for the session.}
+        \label{fig:adminconfirmed}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/admin_booking_decline.png}
+	    \caption{The manager can decline the booking with a message describing why he had to decline, or attach a custom message.}
+        \label{fig:admindecline}
+\end{figure}
+
+The final component is the \textbf{overview of todays bookings} and can be seen in
+\autoref{fig:overviewtoday}. This is intended for 
+the instructor to get a quick overview of how many people are coming on the 
+day, when they will come, and how much they will need to pay, and whether
+they ordered something extra. This will help the instructor handling booked 
+groups. Especially if there is a booking for a big group, the instructor will
+know not to take big groups just prior to having the booked group arrive.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/overview_today.png}
+	    \caption{The instructor can easily see what times there will be incoming groups.}
+        \label{fig:overviewtoday}
+\end{figure}
+
 
 \subsection{Work organization}
-\todo[inline]{Do we change how the work organization is organized, are there
-someone someone with new responsibilities? Can someone potentially do some 
-of the managers work?}
+The future work organization suggested is slightly different to the current 
+work organization. Currently, the manager and the owner are always the same 
+persion. The owner often also takes the role of an instructor, to reduce the 
+hourly wages needed to be paid. 
+
+The tasks of the owner is to evolve the business in a direction that hopefully 
+advances toward achieving the business strategy. We define the tasks of the 
+manager to be the everyday processes required to keep the business running. The 
+last group in the work organization is the instructors, whose only task is to
+receive customers, booked or not, instruct them on the courses and taking 
+payment. Incidentally, the instructors are the only group who actually make
+the profit a reality. If they are misinformed or unsatisfied with their job, 
+they are able to damage the company. Keeping a good relationship between all
+3 groups is therefore crucial to the buisiness.
+
+For the future work practice, we suggest that the owner attempts to find an 
+employee that can be schooled as a manager. The tasks of the manager will then
+be to handle incoming bookings, respond to requests from customers and 
+scheduling of staff for the bookings. This will free the owner from the daily
+management of the business and let him focus on keeping the business in good 
+shape. This could be marketing, or strengthening the social relations in 
+\gomonkey{} by arranging events for the whole company.
 
 \subsection{Qualification needs}
-\todo[inline]{Does the system require any education? The manager will probably
-need to tell about the new system to the instructors, and the manager will have
-to be `taught' how to use the new system.}
-	
+The system is different from the current system, and thus there will have to be
+some introduction to the new system. We can assume that the instructors are 
+familiar with using a calendar overview from the previous system. They will 
+still have to be shown how to navigate to the view of the bookings on the 
+current day, and how to interpret the information which is now visible.
+
+The manager and the owner definitely both need deep knowledge of the system, 
+and how bookings are supposed to be managed. We know that the manager has a 
+decent understanding of computer systems in general, but since this system
+is tailored to the business, there is no chance that he can navigate it 
+without further education. We do, however, have to remember that the owner
+himself actually participated in producing the mockups defining the finished
+system, and thus may have some perception of how the system should work.
+
+The customers of \gomonkey{} will have the necessary qualification, since the
+form is tailored to help a customer, who knows how to use normal web interfaces,
+perform the desired booking with as few errors as possible. This was a 
+requirement for designing the booking for, so the necessary information and
+guidance is available to the customer to avoid any frustration that confusion
+could result in.
+
 \subsection{Advantages and disadvantages}
 In this section we will describe what actual value the vision will bring to 
 \gomonkey. This will help value the advantages against the disadvantages and
@@ -321,7 +519,7 @@ section.
 
 Economically, it is hard to define the absolut increase in profit, and the 
 result may only be achieved more than a year after implementation. And, since 
-\gomonkey is such a new business, it is going to be very difficult to account
+\gomonkey{} is such a new business, it is going to be very difficult to account
 the measured differences to the implementation of the system.
 
 \item[Minimize time requirements pr.\ booking/customer]
@@ -357,7 +555,7 @@ with current best practices and using actual users to build the best possible
 system. This will affect the product and service, but to become better than
 the competitors, it will be necessary to perform upgrades on the system once
 the competitors have upgraded their system. However, with this system in hand,
-\gomonkey will be a competitor to be reckoned with, in the current business 
+\gomonkey{} will be a competitor to be reckoned with, in the current business 
 environment.
 
 \item[Disadvantages]
@@ -433,7 +631,7 @@ topics discussed are supported by the new system.
 The reduced amount of cumbersome communication and easily understandable system
 will also be partly visible  for the customer, since the company will seem more
 professional, and the staff will be happier to welcome the customers upon 
-arrival at \gomonkey.
+arrival at \gomonkey{}.
 
 The pleasant user experience will make sure the customer focuses on the kernel
 business, the treetop climbing course, instead of the necessities of a booking.
@@ -445,11 +643,11 @@ The reduced amount of cumbersome communication may lead the the booking process 
 a less personal feeling for the customer. Knowing that you are writing with
 another human being that actually caters for your specific needs is a very 
 powerful tool, but it is also very time consuming for the company. This may
-result in a more systematic and less personal interaction with \gomonkey, which
+result in a more systematic and less personal interaction with \gomonkey{}, which
 may or may not reduce the customers firsthand experience.
 \end{description}
 
-
+\newpage
 \section{Finances and costs}
 The financial part of the system is not a big part of the analysis but it is
 definitely an important part of being able to perform the, previously mentioned,
@@ -487,11 +685,81 @@ Maintenance will also be necessary once in awhile, mostly to get security
 updates for used technologies. This will amount to approximately 10 hours per year, 
 and will amount to \textbf{5.000DKK/year}.
 
-
+\newpage
 \section{Implementation strategy and plan}
-\subsection{Technical implementation}
-\subsection{Organizational implementation}
+The coherent vision has now been fully described, including descriptions of the
+intended system and how we envision that it will be used. There is still the 
+need of  a sound plan for the transition from the current situation
+to the future situation envisioned in this report. This process is very
+important, since a system can be a perfect solution, but the project can very
+much fail, if there is no plan of how to adapt the business to the system.
 
-\section{Recommendations and priorities}
+\subsection{Technical implementation}
+Initially, the project responsible from \gomonkey{} (the owner) should thoroughly
+read this design report, to make sure he knows how the system is intended to 
+work, and why the system is designed as it is. It is important to have profound
+knowledge of the vision, to be able to monitor the work being done.
+
+The project responsible will then have to contract someone to develop the
+system. This can be a freelance programmer along with a graphics artist, or it
+can be a company with both at their disposal. It is important that there is 
+created a fulfilling contract between \gomonkey{} and the developers of the 
+system, to ensure that \gomonkey{} will be getting the correct product. The 
+developers should read the design report prior to agreeing to the contract and
+price. 
+
+The projects responsible and the developers will have to agree on what server
+hosting supplier is chosen for the system, since \gomonkey{} will have to maintain
+contact with the supplier, even after the system has been developed. The 
+developers should also have an effect on what supplier is chosen, to ensure that
+they have the necessary access and tools to perform the development of the
+system.
+
+During the development phase, it should be possible for the project responsible
+to monitor the progression of the system, to ensure that misconceptions are 
+caught as early as possible.This will help keep the deliverables on track with
+the set time schedule. If this fails, a fair agreement on who pays for the 
+extra work should be worked out in the initial contract with the developers.
+
+Once the system has been developed, the manager should meet up with the 
+developers, and they should perform thorough manual testing and play scenarios, 
+attempting to visualize how the system will work with a customers. The
+developers have probably built even more webpages or some other way to view 
+log files and other monitoring tools, which should also be shown to the manager. 
+This will help the manager perform simple surveillence of the systems health.
+
+Finally, the developers will need to deliver a thorough documentation of the 
+delivered system which can be passed on to anyone who should be required to 
+perform maintenance or further development on the system. This will drastically
+reduce the price of such future interventions related to the IT system itself.
+
+\subsection{Organizational implementation}
+While the technical implementation is a big part of the work that needs to be
+done, it is crucial to remember that a new IT system will affect the whole 
+organization, and thus it is necessary to prepare for the changes, and be very
+vigilant when adapting the company to a new system. 
+
+The requirement for organizational preparation arises after the system has been
+put into production. It is necessary for the employees to be prepared for
+switching to a new system. This concept is known as 'anchoring' and can be 
+helped in many ways. One way is to include the employees in the analysis leading
+to this design report. After the design report, this effors can continually be 
+helped by informing the employees about how the project is coming along, over 
+the course of the development. This will give the employees a chance to accept 
+the changes over a longer period, 
+giving the idea time to 'sprout and bloom' before they will need to use the 
+system. This will increase the readiness for change.
+
+When the system is finished, and ready to be used, the manager should perform
+a training session with the employees. This will include being shown most of 
+the system, even the parts they will not use themself. Performing scenarios
+with the instructors, using the new system will further help the understanding
+of their new role. This session will give the instructors the final idea
+of why the system is good for the company, and equips them for guiding the 
+customers in a better way, since they are aware of the whole user experience.
+
+Finally, the owner should attempt at finding a suitable manager for the 
+company, to finally be able to reap the full reward of the system; the owner
+will have time to develop the company, instead of just running the company.
 
 \newpage

@@ -305,7 +305,11 @@ practices in general, a number of techniques were used:
     \item [Observation] An in-situ observation of the manager was performed,
         to observe how the manager handles the task of receiving a booking. This
         helped clarify the workflow from the managers point of view, and was
-        captured on video for study.
+        captured on video for study. An in-situ observation of the manager
+        setting up the location before customers arrived was also performed, to
+        cover details that may have been missed related to customer preparation.
+        This was also documented on video, but yielded very little useful
+        information with regards to the IT systems.
 
     \item [In-situ interview] An in-situ interview with the manager was
         performed, which took on a structured format and was focused on how the
@@ -318,28 +322,76 @@ practices in general, a number of techniques were used:
         schedule employee times is not of huge priority, because the existing
         system works and he believes both the employees and himself are happy
         with it.
-
-    \item [Market study] It was important to the design team to perform a market
-        study, in order to verify whether using a standard system could
-        potentially meet the goals of a future IT system, whether one could be
-        tailored to do so, or whether a custom system would be the best option.
-        A number of online booking systems were found via search engines, and
-        five systems were scoped out in a market study. The study attempts to be
-        as unbiased as possible, trying instead to highlight both pros and cons
-        of each booking system at a general level. 
+    \item [Diagnostic Map] \todo[inline]{MGG: Diagnostic mapping description}
 \end{description}
 
 Based upon the results of the aforementioned techniques, prioritized goals and
 problems were scoped out. This served to simplify subsequent work with the
 limited time we had available and assist in making correct choices about how and
 where to innovate. Importantly, the techniques covered enough ground for us to
-begin the innovation aspect.
+begin the innovation aspect with the new-found knowledge, documented as an
+analysis report\cite[p. 159]{bodker2004participatory} that describes backdrop
+and focus, goals, problems, needs, ideas for solutions as well as suggested
+priorities.
 
-\section{A detailed look at key choices and techniques} \label{sec:detailed}
+Two parallel tasks were set in motion during the innovation phase: the
+development of a set of mockups to represent what a \textit{custom-built system}
+could look like, as well as a market study of existing standard systems
+available. Aligning the market study against the prioritized goals for the
+coherent vision of a new IT system for booking allowed the design team to
+primarily discard standard systems, on the grounds of being tailored to a
+completely different market. For instance, many booking systems contain a notion
+of fixed services, fixed time slots or similar. This clashes with the fluid
+booking that \gomonkey{} supports, where a customer can bring \textbf{X}
+participants of different ages, at some user-specified time. An experimentation
+with the mockup `prototype' was performed in-situ with the manager Michel, 
+leading to a large number of suggested changes to the mockups, the uncovering of
+additional usecases and cornercases, and new knowledge that was not obtained
+during the in-depth analysis phase.
+
+Based upon this new knowledge, the mockups created were re-drafted into their
+fourth official revision. It is noteworthy that the mockups have changed less
+and less each time, perhaps because the problem domain has become more
+well-described in each iteration and changes have gone from being large,
+sweeping alterations to the overall workflow and over to cosmetic nit-picking.
+
+The mockups became the basis for a vision, which suggests the implementation of
+a custom-built system and describes the resources required, the organizational
+changes, the skills required by employees and a specific strategy elaborating on
+the \textit{why} and \textit{how}.
+
+\reflection{}
+%%%%
+\begin{description}
+    \item [Customer groups] The experimentation with the mockup prototype unveiled that 
+        \gomonkey{} has three primary customer groups: private persons, companies and public
+        institutions. For public institutions, a special invoice must be filled
+        out by \gomonkey{} which requires obtaining \textit{EAN}-related details
+        from the institution, which is an entirely different flow of events from
+        how \gomonkey{} usually handles the payment of bookings, i.e.\ through
+        looking at bank statements. 
+    \item [Altered workflow] The customer booking workflow of the proposed mocked up 
+        system was found to be confusing by the Manager, warranting a fundamental change 
+        to the way information was passed back and forth between company and customer, 
+        to conform more with the way many online websites support purchase of goods and 
+        subsequent confirmations.
+\end{description}
+
+\section{A detailed look at some key choices and techniques} \label{sec:detailed}
 \subsection{Combining the in-depth and innovation phases}
 \todo[inline]{Describe how we combined the in-depth and
 innovation phases, and how the literature also supports
-this in certain cases. 2-3 pages}
+this in certain cases. Start by explaining why you would, then explain how we
+did it, then what it gave us. 2-3 pages}
+
+% 
+%\item [Combining the in-depth and innovation phases] This choice was one
+%        mandated by the course requirements. However, it also turned out to be a
+%        wise one. The knowledge gained in the in-depth analysis phase turned out
+%        to be \textit{insufficient}. This resulted in new knowledge being
+%        acquired during the innovation phase, which prompted fundamental changes
+%        and clarifications to the way the design team views \gomonkey{} as a
+%        company, and the booking system features. 
 
 \subsection{Ethnographically inspired analysis}
 \todo[inline]{Describe how to combine techniques to provide
@@ -351,7 +403,8 @@ to know \textit{what} they do, we must also know \textit{why}.
 \todo[inline]{Describe how observation works as a technique.
 Describe how others have used observation to positive effect.
 Describe how we have used observation, and what some of the
-pitfalls are. Briefly cite and describe one alternative to
+pitfalls are, e.g.\ missing that \gomonkey{} had 3 customer types, as part of
+the in-depth analysis phase. Briefly cite and describe one alternative to
 observation. 1-2 pages}
 
 \subsection{User stories as a technique}
