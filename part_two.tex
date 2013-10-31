@@ -28,18 +28,18 @@ define an IT design project as
 %%
 \vspace{5mm}
 \begin{framed}
-\textbf{IT design project}: A project conducted at a company that reveals
-goals, defines problems, and indicates solutions, with the aim of designing
-sustainable uses of IT based on a specific problem within the company.
+    \textbf{IT design project}: A project conducted at a company that reveals
+    goals, defines problems, and indicates solutions, with the aim of designing
+    sustainable uses of IT based on a specific problem within the company.
 \end{framed}
 \vspace{5mm}
 %%
 The \must{}\cite{bodker2004participatory} method consists of an
 \begin{inparaenum}[1)]
-\item initiation phase
-\item in-line analysis phase
-\item in-depth analysis phase and
-\item innovation phase.
+    \item initiation phase
+    \item in-line analysis phase
+    \item in-depth analysis phase and
+    \item innovation phase.
 \end{inparaenum}
 It seeks to provide a perspective on IT design where you view IT projects not
 just through the lens of what a prospective client wishes done, but also take into
@@ -86,6 +86,14 @@ be described in length here, instead some of the benefits are described below.
         projects.
 \end{description}
 
+While \cite{bodker2004participatory} takes great care to separate the four
+principles, there is grounds for considering whether the anchoring and coherent
+vision are not one and the same; equally so for first-hand experience and
+genuine user participation. At the very least there is a great overlap between
+some of the principles. This can be confusing, if specific activities or
+techniques described later are associated or dis-associated with a specific
+principle, and weakens the ideology and use of the principle in general. 
+
 The purpose of an IT design project is \textbf{not} to end up with a
 finished implementation or actual, implemented alterations to company work
 practice, but to provide a report that allows a company to make an
@@ -105,13 +113,13 @@ projects as measured by The Standish Group\cite{standish2012} had increased to
 \textbf{37\%}, attributed in part to the same four factors of success as they had
 proposed in 1995. 
 
-There are different ways to approach solving the reasons for
-failure proposed by The Standish Group as well as how to reach the elements of
-success. One approach is to focus on the \textit{implementation} stage of
+There are many different ways to try and prevent the causes of failure 
+proposed by The Standish Group. One is to focus on the \textit{implementation} stage of
 software projects and improve the development process itself, e.g.\ the
 innovation of methods such as agile development. Another is to focus on the
 \textit{planning} stage of software projects, which is what \must{} and this
-report concern themselves with.
+report concern themselves with, not only to prevent failure but to provoke
+success.
 
 Readers are encouraged to read \cite{bodker2004participatory} for a more
 wholesome description of how the \must{} method works.
@@ -154,7 +162,8 @@ The techniques listed below were used in one or more of the design phases.
         map lacks the prioritization of a risk assessment. I think this is a problem with a diagnostic map!}
 
     \item [Market study]: a market study is not listed as an explicit \textit{technique} by \cite{bodker2004participatory}, but often
-        occurs in relation to IT projects to scope out prospective possibilities for target systems. Sometimes designing a custom system
+        occurs in relation to IT projects to scope out prospective possibilities
+        for target systems \todo[inline]{MGG: We need a source on that!}. Sometimes designing a custom system
         is the correct solution, while other times seeking out an existing solution and either using it as-is or tailoring it to use is
         the more sensible approach. A market study attempts to provide an unbiased evaluation of a number of different products or systems,
         such that they may later be compared more directly with the prioritized goals and aims of, in this case, a design report.
@@ -187,9 +196,61 @@ The techniques listed below were used in one or more of the design phases.
         \textbf{horizontal prototype}.
 \end{description}
 
-\section{From beginning to end: Our process of design} \label{sec:process}
-\todo[inline]{Describe what we did from the very beginning
-til the end. 2-3 pages}
+\section{From beginning to end: The design process} \label{sec:process}
+The following is written in a narrative style, as the purpose is to
+walk the reader through the sequence of events as they occured from one
+to the next. To avoid mixing reflection and an account of things that happened,
+the narrative is split into a section for each phase followed by reflection on
+that particular phase (or set of phases, for in-depth analysis and innovation).
+
+\subsection{The initiation phase}
+\gomonkey{} was contacted by the authors because they had a contact at the
+company and the website \url{http://www.gomonkey.dk} showed obvious issues with
+regards to the booking system. Suspicions were confirmed over the telephone,
+where the owner and manager at \gomonkey{}, Michel, agreed to an initial in-situ
+meeting. The meeting was to establish grounds for a design project, focused on
+the booking system of the \gomonkey{} website. A qualitative, unstructured
+in-situ interview was conducted between two of the authors and Michel, to
+introduce the prospect of a design project, to establish a common level of
+expectation and to verify the problem first-hand. Notes were taken on paper
+during the interview, which were later translated into a summary of points that
+described: the managers description of customer bookings, the managers
+description of his own workflow, the existing IT infrastructure of \gomonkey{},
+the company organization, a list of competitors and minor notes on auxiliary
+nice-to-have ideas.
+
+Based upon this summary of points, a document with project description and
+specification were drawn up, along with an initial baseline plan. The project
+specification included information on existing IT infrastructure, the skill-set
+of the design team (the authors) and a list of stakeholders and participants.
+
+\reflection{}
+%%%%
+\begin{description}
+    \item [Choice of interview form] As \cite[p.228]{bodker2004participatory} describes,
+        an unstructured interview form is often used for qualitative interviews,
+        where dialog is a desired by-product and conversation can stray across a
+        broad range of topics. This is in stark contrast to a more structured
+        interview, which may have been more appropriate if it was possible to line 
+        up all of the employees and ask specific questions about the existing IT
+        system and workflow.
+
+    \item [Length of initiation phase] The initiation phase was quite short in this instance.
+        While the initial scope of the project was always supposed to be the
+        booking system, the initiation phase failed to clarify on important
+        aspects of the project, such as whether auxiliary systems like payment 
+        would be considered part of the design project. In addition, where
+        \cite{bodker2004participatory} recommends signing a project charter
+        between the design team and the stakeholders, no such charter was
+        signed. This prevented a potential avenue for anchoring the employees,
+        and left the ball in the design teams court, so to speak. Precisely
+        because the project was on a short deadline, making sure to clearly
+        establish scope from the get-go could have had an important effect on
+        how the remaining time was spent.
+\end{description}
+
+\subsection{The in-line analysis phase}
+
 
 \section{A detailed look at key choices and techniques} \label{sec:detailed}
 \subsection{Combining the in-depth and innovation phases}
