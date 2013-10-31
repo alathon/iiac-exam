@@ -211,7 +211,169 @@ The scheduling and journaling of staff will still be hosted in the company's
 Google Drive. 
 
 \subsubsection{Components, functions and interface}
-\todo[inline]{Pictures of mockup and descriptions of how it works}
+The system contains 5 general components;
+\begin{itemize}
+\item Booking form
+\item Booking status page
+\item Administrative overview
+\item Administrative booking status
+\item Todays bookings
+\end{itemize}
+
+The bare \textbf{booking form component} can be seen in \autoref{fig:bookinitial}. The booking
+form incorporates many of the original features and functions of the existing 
+\gomonkey booking form. The user is expected to input values for a number of 
+different fields:
+\begin{enumerate}
+	\item Name or Company (Text string)
+	\item E-mail address (Text string)
+	\item Phone number (Text string)
+	\item Day of booking (Calendar-valid date found with a calendar widget)
+	\item Starting time (Valid 24h-format time)
+	\item 0 or more participants between age 7-9, age 10-13 and age 14+, at minimum 1 participant.
+	\item How the user heard of GoMonkey (Radio box)
+	\item Optionally, food and drink can be ordered as well.
+\end{enumerate}
+
+A price calculator has been added as part of the booking form, that provides 
+a running total of the cost of the booking as well as any deposit, if the cost
+of the booking is large enough. A Frequently Asked Questions section has been 
+moved directly into the booking form, for easy viewing during booking.
+
+An example of a filled booking page can be seen in \autoref{fig:bookfilled}. The
+'Submit' button will prepare the booking, for a final view for the customer to 
+check that the information are correct. This can be seen on 
+\autoref{fig:bookconfirm}. If the user agrees to the entered information, the
+user can click 'Book' and the booking will be sent while the user is presented
+with a modal popup that informs the user that the booking will need to be confirmed,
+and that there might be a required deposit. This can be seen on 
+\autoref{fig:bookconfirmpressed}.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_initial.png}
+	    \caption{The bare booking form which the customers will find on the WordPress website.}
+        \label{fig:bookinitial}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_filled.png}
+	    \caption{The booking form is filled and ready to be submitted.}
+        \label{fig:bookfilled}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_confirmation.png}
+	    \caption{The booking form is submitted and the customer can view the entered information before finally booking.}
+        \label{fig:bookconfirm}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_confirmation_bookpressed.png}
+	    \caption{The booking form is submitted and the customer is informed about the following process.}
+        \label{fig:bookconfirmpressed}
+\end{figure}
+
+The \textbf{booking status component} on \autoref{fig:bookstatus1} looks quite similar 
+to the booking form, but the 
+user cannot make any changes to the booking. In addition to a list of all of 
+the things the user could see in the Booking form, the user can also see 
+whether \gomonkey{} has confirmed the booking or not and can pay for the deposit 
+and/or the full cost of the booking.
+
+An unconfirmed booking can not yet be paid for in any way. However, once a 
+booking is confirmed by \gomonkey{} the payment options appear, as in 
+\autoref{fig:bookstatus2}. Payment occurs 
+by clicking on either a ‘Pay Deposit’ button, or a ‘Pay full amount’ button. 
+For institutions, there is also a ‘Confirm payment via EAN’ button, which 
+allows the user to enter EAN-related details instead.
+
+Finally, when an amount has been selected, is is possible to select a preferred
+payment processor, as in \autoref{fig:bookstatus3}. This is important, since 
+instant online transactions are very
+critical to the function of the system.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_payment_1.png}
+	    \caption{The customer can see the booking, but can't pay until the date and time has been confirmed.}
+        \label{fig:bookstatus1}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_payment_2.png}
+	    \caption{The customer is now able to select the desired amount to be paid, prior to visiting the park.}
+        \label{fig:bookstatus2}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/booking_payment_3.png}
+	    \caption{Finally, the customer can select a preferred payment processor and pay instantly.}
+        \label{fig:bookstatus3}
+\end{figure}
+
+The \textbf{administrative overview component} displays the incoming bookings which require an 
+action from the manager, and can be seen in \autoref{fig:adminoverview}. The 
+date, time and amount of people is shown for quick confirmation, and is needed,
+each booking can be entered and scrutinized with the administrative booking status.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/overview_important.png}
+	    \caption{The manager get a good overview of the incoming bookings which requires an action.}
+        \label{fig:adminoverview}
+\end{figure}
+
+The \textbf{adminstrative booking status component} describes a booking in full and allows the
+\gomonkey{} manager to either confirm a booking or decline it, based on the 
+calendar overview presented next to the confirmation box. This can be seen in
+\autoref{fig:admin}. 
+
+If the manager accepts a booking, an e-mail will be sent to the user notifying 
+them of this, and the user-viewable booking status page will reflect that the 
+booking has been accepted. The booking is now open for the user to pay 
+deposit/full amount. This can be seen in \autoref{fig:adminconfirmed}.
+
+If the manager declines a booking, an e-mail will be sent to the user notifying 
+them of this, and the user-viewable booking status page will reflect that the 
+booking has been declined. The manager can supply a reason at the time of 
+declining, with either a standard response, or a manual response with a
+suggested alternative time and date. This can be seen in \autoref{fig:admindecline}
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/admin_booking.png}
+	    \caption{The manager can view the booking and see the calendar dates surrounding the booking.}
+        \label{fig:admin}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/admin_booking_confirmed.png}
+	    \caption{The manager has confirmed and the customer can now pay for the session.}
+        \label{fig:adminconfirmed}
+\end{figure}
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/admin_booking_decline.png}
+	    \caption{The manager can decline the booking with a message describing why he had to decline, or attach a custom message.}
+        \label{fig:admindecline}
+\end{figure}
+
+The final component is the \textbf{overview of todays bookings} and can be seen in
+\autoref{fig:overviewtoday}. This is intended for 
+the instructor to get a quick overview of how many people are coming on the 
+day, when they will come, and how much they will need to pay, and whether
+they ordered something extra. This will help the instructor handling booked 
+groups. Especially if there is a booking for a big group, the instructor will
+know not to take big groups just prior to having the booked group arrive.
+
+\begin{figure}[htbp]
+    \centering
+        \includegraphics[width=.8\textwidth]{figures/mockup/overview_today.png}
+	    \caption{The instructor can easily see what times there will be incoming groups.}
+        \label{fig:overviewtoday}
+\end{figure}
+
 
 \subsection{Work organization}
 The future work organization suggested is slightly different to the current 
@@ -532,8 +694,5 @@ customers in a better way, since they are aware of the whole user experience.
 Finally, the owner should attempt at finding a suitable manager for the 
 company, to finally be able to reap the full reward of the system; the owner
 will have time to develop the company, instead of just running the company.
-
-\newpage
-\section{Recommendations and priorities}
 
 \newpage
