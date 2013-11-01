@@ -139,14 +139,16 @@ can be followed in \autoref{fig:customer}.
         \label{fig:customer}
 \end{figure}
 
-\item[Processing a booking]
-The manager checks his e-mail for a new booking request. If the booking request has any missing information, he contacts the customer.
-He and the customer communicate over e-mail until all missing information is supplied.
-An overview of this can be seen in \autoref{fig:manager}. 
-After the customer has supplied all the requested information, the manager then enters the information in Google
-Calendar, linking the e-mail with the event. A confirmation e-mail is sent to the customer to inform him the booking is scheduled.
-Gathering of additional booking information through e-mail is done manually and is tedious. This can simply be avoided by 
-building a more complex booking system. 
+\item[Processing a booking] The manager checks his e-mail for a new booking
+    request. If the booking request has any missing information, he contacts the
+    customer.  He and the customer communicate over e-mail until all missing
+    information is supplied.  An overview of this can be seen in
+    \autoref{fig:manager}.  After the customer has supplied all the requested
+    information, the manager then enters the information in Google Calendar,
+    linking the e-mail with the event. A confirmation e-mail is sent to the
+    customer to inform him the booking is scheduled.  Gathering of additional
+    booking information through e-mail is done manually and is tedious. This can
+    simply be avoided by building a more complex booking system. 
 
 \begin{figure}[htbp]
     \centering
@@ -170,15 +172,19 @@ in Google Calendar(blue for fully paid and green for partially paid) and also ch
         \label{fig:payment}
 \end{figure}
 
-\item[Handling booked customers]
-On the booked time and date, the customer arrives at \gomonkey{}. If he has not printed and signed the security
-disclaimer at home, he is handed out one for each member of the group. After taking care of the legal requirements, the instructor present proceeds to
-calculate the remaining sum to be paid by the customer, if any. He uses a calculator to add up what the customer has left to pay
-from the booking and any extra services the customer might want. If the sum which to be paid is non-zero the customer is asked whether he wants to pay
-by creditcard or cash. Based on the customer's preferences, the instructor requests payment accordingly. After the customer has paid or if the sum
-on the calculator is 0 the handling procedure is over.
-The instructor can either be the employee present that day at \gomonkey{} headquarters
-or the manager. The process is shown in \autoref{fig:handling}. 
+\item[Handling booked customers] On the booked time and date, the customer
+    arrives at \gomonkey{}. If he has not printed and signed the security
+    disclaimer at home, he is handed out one for each member of the group. After
+    taking care of the legal requirements, the instructor present proceeds to
+    calculate the remaining sum to be paid by the customer, if any. He uses a
+    calculator to add up what the customer has left to pay from the booking and
+    any extra services the customer might want. If the sum which to be paid is
+    non-zero the customer is asked whether he wants to pay by creditcard or
+    cash. Based on the customer's preferences, the instructor requests payment
+    accordingly. After the customer has paid or if the sum on the calculator is
+    0 the handling procedure is over.  The instructor can either be the employee
+    present that day at \gomonkey{} headquarters or the manager. The process is
+    shown in \autoref{fig:handling}. 
 
 \begin{figure}[htbp]
     \centering
@@ -507,10 +513,34 @@ removes the burden of maintenance and hardware failure from \gomonkey{}, which
 is an important consideration for a small company.
 
 \subsection{Hire a development team}
+To facilitate the development of a custom system, a programmer and graphics
+artist should be hired. In this report we assume that two individuals are found
+and contracted individually, at the necessary stages of the project. Initially,
+an IT consultant with technical skills within frontend development should be
+found. Examples of relevant technologies are \textit{JavaScript, HTML, CSS, AJAX
+and PHP}. The programmer should also have knowledge of RDBMS-based databases,
+and preferably have prior experience implementing CRM-systems or similar.
+
+Once the programmer has been contracted, relevant documentation for the system
+should be passed on to the programmer, in order to inform them as best possible.
+This report serves as the primary documentation of the system and its intent,
+supported by the mockups and presented work flow.
+
+Near the end of development, a graphics artist should be contracted to draw
+relevant art for the pages, particularly those that customers can visit.
+Estimates for costs and time required by this team have already been provided.
 
 \subsection{Privately test the new system}
+The system should be rolled out in testing privately first. At this point in
+time, the employees and manager of \gomonkey{} can test the system and verify
+that it satisfies all of the requirements. This can also serve as a good
+opportunity to provide training to any employees that need to be able to also
+handle booking, either through a workshop-format or paper-based instructions.
 
 \subsection{Replace the old WordPress-based booking form}
+Once the system is ready and the relevant employees are trained in using the
+system, it can be released into the live environment and replace the existing
+booking form and e-mail flow.
 
 \newpage
 \section{A standard system as an alternative}
