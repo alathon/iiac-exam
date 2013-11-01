@@ -25,14 +25,23 @@ advice a difficult one. A large portion of the work done in this report is based
 upon the practices and techniques of participatory design as proposed by
 \cite{bodker2004participatory}.  B\o dker et al.\ describe a search for
 techniques, concepts and ideologies which may apply to the \textbf{design and
-planning} of IT projects on a general level. They define an IT design project as
+planning} of IT projects on a general level. 
+
+Karat\cite{karat1997evolving} describes the active involvement of users as, ``We don't consider
+usability as limited to the display and keyboard interface between human and machine, but rather
+we recognize that it encompasses how any artefact fits into a complex work or home environment''.
+Kujala\cite{kujala2003user} proposes that user involvement is most efficient and influential in the 
+\textbf{early} stages of system development, as the cost involved in making changes increases during 
+system development. These articles are some of several that support the notion of approaches such as 
+participatory design\cite{bodker2004participatory} and contextual design\cite{beyer1997contextual}.
+
+We define an \textbf{IT design project} here according to B\o dker et al.\ 
 %%
 \vspace{5mm}
 \begin{framed}
     \textbf{IT design project}: A project conducted at a company that reveals
     goals, defines problems, and indicates solutions, with the aim of designing
-    sustainable uses of IT based on a specific problem within the company. - B\o
-    dker et al. (2004)
+    sustainable uses of IT based on a specific problem within the company.\cite{bodker2004participatory}
 \end{framed}
 \vspace{5mm}
 %%
@@ -47,11 +56,10 @@ It seeks to provide a perspective on IT design where you view IT projects not
 just through the lens of what a prospective client wishes done, but also take into
 account the work environment, the organization as a whole, the interaction
 between company and customers and subsequent changes and impacts that making
-alterations to a work environment can result in. As a whole, participatory
-design adopts an ethnographic approach to design, encouraging the designer to
-get up close and personal.
+alterations to a work environment can result in. This can be considered as an 
+\textbf{ethnographic approach} to design.
 
-These goals are supported by four guiding \textbf{principles}.
+The goals of participatory design are rooted in four guiding \textbf{principles}.
 \begin{description}
     \item [The principle of a coherent vision] is concerned with making sure that stakeholders
         and employees come together in a joint venture to innovate, with the aim
@@ -186,10 +194,14 @@ The techniques listed below were used in the design project.
         task occurs and the flow of information either inside the company or
         between customer and company.
 
-    \item [Developing scenarios] This technique originates with \cite{clausen1993narratives} and revolves around creating
-        prose-style representations exemplifying a certain work practice, under future use of the system. This both anchors employees
-        and helps develop a coherent vision of the future for all participants of the design group. A more common name for this technique
-        is possibly the development of \textit{user stories} or \textit{usecases}, which embody a similar if not the same intent.
+    \item [Developing scenarios] This technique dates back to at least
+        \cite{clausen1993narratives} and revolves around creating prose-style
+        representations exemplifying a certain work practice, under future use
+        of the system. This both anchors employees and helps develop a coherent
+        vision of the future for all participants of the design group. A more
+        common name for this technique is possibly the development of
+        \textit{user stories} or \textit{usecases}, which embody a similar if
+        not the same intent.
 
     \item [Experimenting with prototypes] A horizontal
         prototype\cite{bodker2004participatory} is one which has no real
@@ -326,7 +338,7 @@ worked and clarify work practices in general, a number of techniques were used:
         analyzed. \todo[inline]{MGG: Asbj\o rn, would you fill in details
         here?}
 
-    \item [Observation] An in-situ observation of the manager was performed,
+    \item [In-situ Observation] An in-situ observation of the manager was performed,
         to observe three different work processes: 
         \begin{inparaenum}[1)]
             \item how the manager handles receiving a booking
@@ -342,7 +354,22 @@ worked and clarify work practices in general, a number of techniques were used:
         the third observation provided little to no information transferable
         into an IT system context.
 
-    \item [Think-aloud experiment] Test  
+    \item [Think-aloud experiment] A think-aloud experiment was constructed for
+        a potential customer, focused around the booking work flow. The
+        potential customer is a friend of a member of the design team, a scout
+        leader contemplating booking a trip for his scouts. The
+        experiment took place in the subjects own apartment and was recorded on
+        video through a smartphone. The only setup required by the design team
+        was to decide in advance that the user should try and perform a booking
+        through the \gomonkey{} website. The video was later described in a text
+        document, describing the circumstances of the experiment and its
+        results. The experiment shed light on many of the initial concerns the
+        design team had with the existing booking form, confirming several of
+        the issues that were found with it. Four things in particular were
+        highlighted as problems, by the subject: bad response from submission of the form,
+        lack of e-mail confirmation, problematic entering of booking date,
+        pre-entered text was a nuisance.
+
     \item [In-situ interview] An in-situ interview with the manager was
         performed, which took on a structured format and was focused on how the
         Manager handles scheduling employee work schedules. In this interview,
@@ -354,19 +381,26 @@ worked and clarify work practices in general, a number of techniques were used:
         schedule employee times is not of huge priority, because the existing
         system works and he believes both the employees and himself are happy
         with it.
-    \item [Diagnostic Map] \todo[inline]{MGG: Diagnostic mapping description}
+    \item [Diagnostic Map] The design team created a diagnostic map, based on
+        problems identified throughout the interviews and observations performed 
+        during the in-depth analysis phase. Particular attention was paid to
+        problems related to work processes. As such, it reflects the view of the
+        current problems, effects and potential solutions that the design team
+        had at the time of its creation. This also means that the diagnostic map
+        was \textbf{not} used as an anchoring device\cite{bodker2004participatory}, 
+        as \gomonkey{} had no part in its creation. 
 \end{description}
 
 Based upon the results of the aforementioned techniques, prioritized goals and
 problems were scoped out. This served to simplify subsequent work with the
-limited time we had available and assist in making correct choices about how and
+limited time we had available and assist in making prioritized choices about how and
 where to innovate. Importantly, the techniques covered enough ground for us to
 begin the innovation aspect with the new-found knowledge, documented as an
 analysis report\cite[p. 159]{bodker2004participatory} that describes backdrop
 and focus, goals, problems, needs, ideas for solutions as well as suggested
-priorities.
+priorities through means such as a diagnostic map.
 
-Two parallel tasks were set in motion during the innovation phase: the
+Two parallel tasks were set into motion during the innovation phase: the
 development of a set of mockups to represent what a \textit{custom-built system}
 could look like, as well as a market study of existing standard systems
 available. Aligning the market study against the prioritized goals for the
@@ -429,18 +463,51 @@ did it, then what it gave us. 2-3 pages}
 %        company, and the booking system features. 
 
 \subsection{Ethnographically inspired analysis}
-\todo[inline]{Describe how to combine techniques to provide
-an ethnographically inspired analysis. It is not good enough
-to know \textit{what} they do, we must also know \textit{why}.
-1-2 pages}
+In ethnography, the idea is to immerse yourself in the culture of a
+society in order to gain a deeper understanding of the \textit{why}. An
+important aspect of this is the realization that the way an activity is explained by an
+individual can differ from the actual behavior exhibited when performing that
+activity. This has the obvious implication that we must not only hear
+descriptions of an activity, but also observe it in action\cite{simonsen1997using}.
 
-\subsection{Observation as a technique}
-\todo[inline]{Describe how observation works as a technique.
-Describe how others have used observation to positive effect.
-Describe how we have used observation, and what some of the
-pitfalls are, e.g.\ missing that \gomonkey{} had 3 customer types, as part of
-the in-depth analysis phase. Briefly cite and describe one alternative to
-observation. 1-2 pages}
+This concept is relevant not only in sociological or ethnographic studies, but also if
+you perceive a workplace as a culture and environment. This idea has emerged more in recent
+years as part of participatory design\cite{crabtree1998ethnography}, perhaps as an attempt to
+prevent so-called `tunnel-vision', during which perfect technological solutions are created for
+the \textit{wrong} set of problems\cite{sol1984prototyping}. One proposed solution is to pay much
+attention to the social organisation of the current 
+practice\cite{hughes1994moving, crabtree1998ethnography, simonsen1997using, bodker2004participatory}.
+
+For example, \cite{simonsen1997using} presents a project case involving a film
+studio, during which an ethnographically inspired analysis is utilized to
+uncover what turns out to be a very complex series of dependencies within the
+work organization, to the mutual surprise of both the design team \textbf{and}
+the company. \cite{simonsen1997using} surmise that using ethnographically inspired techniques
+resulted in changes that challenged the original plan and design, which was developed without.
+Needs were uncovered through the ethnographic techniques, that neither designers nor
+the film company knew were present.
+
+Surprisingly, \cite{kujala2003user} describes participatory design but specifically separates it from
+ethnography as different streams of research, attributing observations and video-analysis to ethnography 
+alone, categorizing participatory design by an emphasis on democratic participation and techniques revolving 
+around workshops and prototypes. This is in disagreement with \cite{bodker204participatory}, in which
+observations and interviews are \textbf{central} techniques and ethnography plays an inclusive, important role.
+
+Despite disagreements over which areas overlap how, it seems a general trend that work in the IT industry consider
+ethnographic approaches more and more, as models of a work environment continue to improve and encompass more diverse
+situations. The virtue of pursuing this angle can easily be seen by considering the reports of The Standish Group, where
+factors that can easily be related to ethnographically quantifiable concepts continue to be top factors in successful IT
+projects to this\cite{standish2012}.
+
+For these reasons, particular attention was paid to techniques that would uncover the underlying \textbf{reasons} for
+the current work practices at \gomonkey{} during the in-depth analysis and innovation phases. In line with relevant
+articles mentioned above, many things were discovered during observations and interviews, which had not surfaced earlier
+in more direct, prompted queries about work process. However, it is important to be aware of the \textbf{limitations} of
+these ethnographically inspired techniques as well. An observation only observes what the observed happens to be doing, and
+does not capture activities that lie outside of the observation. This may seem like an obvious tangent, but it is easy to fall
+into a trap of thinking that you have covered all bases because you have done rigorous observation or interviews. Corner cases
+are quite often defining for work practice and can sometimes be very hard to capture during observation, especially if neither
+the company or design team are acutely aware of their existence.
 
 \subsection{User stories as a technique}
 \todo[inline]{Describe how user stories work as a technique
